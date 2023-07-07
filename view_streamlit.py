@@ -15,7 +15,7 @@ def train_model(params):
     st.write("训练参数：", params)
     # 在这里执行模型训练的逻辑
     model=train.run_model(params)
-    st.write(model)
+    # st.write(model)
     st.write('Train success!!!!⭐')
 
 # 获取下一级目录中的文件夹，主要用来获取data的根目录
