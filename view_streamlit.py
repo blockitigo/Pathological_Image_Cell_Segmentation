@@ -30,7 +30,7 @@ def get_all_folders(folder_path, relative_path=""):
 
 # 上传，获取配置文件
 def creat_upfile_config():
-    config_file = st.file_uploader("Upload a configuration file", type=["jpg","png"])
+    config_file = st.file_uploader("上传一张测试图片", type=["jpg","png"])
     config_path=''
     filename=''
     if config_file is not None:
@@ -330,7 +330,7 @@ def main():
     )
 
     st.title("MMDETECTION VIEW")
-    st.header("这是一个简单的模型训练展示示例")
+    st.header("这是一个简单的模型展示示例")
     # navigation = st.sidebar.radio("Navigation", ["Train", "Test"])
     if choose == "Train":
         creat_page_train()

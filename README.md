@@ -40,13 +40,13 @@
 
 由于我们预测的病理细胞类别数共5类，所以需要修改分类的类别数
 
-### ".\mmdetection\mmdet\datasets\coco.py"
+### "/mmdet/datasets/coco.py"
 
 CocoDataset类的METAINFO的classes属性值修改为    ('1', '2', '3', '4', '5')
 
 
 
-### ".\mmdetection\mmdet\datasets\class_names.py"
+### "/mmdet/evaluation/functional/class_names.py"
 
 coco_classes方法的返回值设为    '1', '2', '3', '4', '5'
 
