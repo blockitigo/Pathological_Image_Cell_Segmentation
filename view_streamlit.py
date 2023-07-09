@@ -126,13 +126,15 @@ def creat_page_test():
     epoch='./work_dirs/'
     epoch_path=epoch+sbdir.selectbox("请选择一个权重文件", list_files_in_directory(epoch))
     img_path,filename=creat_upfile_config()
-    
+    #置信度
+    confidence=sbdir.slider("请选择一个置信度，大于该置信度的目标将被实例分割",min_value=0.1, max_value=1.0, value=0.5 )
     if sbdir.form_submit_button("测试参数"):
         train_params = {
             "epochs": epoch_path,
             "config_path": config_path,
             "img_path": img_path,
-            "filename": filename
+            "filename": filename,
+            "confidence":confidence
 
         }
         st.write(train_params)
@@ -141,7 +143,8 @@ def creat_page_test():
             "epochs": epoch_path,
             "config_path": config_path,
             "img_path": img_path,
-            "filename": filename
+            "filename": filename,
+            "confidence":confidence
         }
         res_path=test.predict(train_params)
         # 创建Streamlit的两列布局
